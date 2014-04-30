@@ -4,14 +4,13 @@ makeCacheMatrix <- function(mat = matrix(nrow=0, ncol=0)){
   
   # Function to set and cache matrix and its inverse
   set <- function(y){  
-    mat <<- y
+    mat <<- y                      # "<<-" is used here to assign a value to an object in a different environment
     inv <<- NULL
   }
   
   get <- function() mat  # Function to return matrix
   
-  setinv <- function(v) inv <<- v  # "<<-" is used here to assign a value to an object in a different environment
-                                   # Function to cache and store value of calculated inverse
+  setinv <- function(v) inv <<- v  # Function to cache and store value of calculated inverse
                                    # This "cache" value will be used once calculated (without having
                                    # to re-calculate this value every time)
   
