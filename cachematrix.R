@@ -1,5 +1,5 @@
-# Function to make cache matrix with default 0,0 dim matrix 
-makeCacheMatrix <- function(mat = matrix(nrow=0, ncol=0)){
+# Function to make cache matrix 
+makeCacheMatrix <- function(mat = matrix()){
   inv <- NULL   # inverse
   
   # Function to set and cache matrix and its inverse
